@@ -31,10 +31,10 @@ namespace HackerNews.WebAPI.Controllers
         }
 
         // GET: api/HackerNews/5
-        [HttpGet("{id}", Name = "Get")]
-        public string Get(int id)
+        [HttpGet("{numberOfStories}", Name = "Get")]
+        public async Task<string> Get(int numberOfStories)
         {
-            return "value";
+            return await service.GetStoriesAsync(numberOfStories);
         }
 
         // POST: api/HackerNews
