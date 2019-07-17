@@ -54,8 +54,6 @@ namespace HackerNews.WebAPI.Services
             return result;
         }
 
-
-
         private async Task<string> GetStoryByIdAsync(int id)
         {
             var client = new HttpClient();
